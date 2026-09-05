@@ -31,6 +31,9 @@ public class StarFade : MonoBehaviour
     {
         if (_emitter == null) return;
 
+        if (Camera.main != null)
+            transform.rotation = Camera.main.transform.rotation;
+
         // Convert normalizedDistance back to actual distance in units
         float dist = _emitter.normalizedDistance * _emitter.maxRange;
         // t = 0 when dist >= fadeRange, t = 1 when right at the star
