@@ -29,7 +29,7 @@ public class PlayerSensor : MonoBehaviour
 
     void Update()
     {
-        SignalEmitter[] emitters = FindObjectsByType<SignalEmitter>(FindObjectsSortMode.None);
+        SignalEmitter[] emitters = FindObjectsByType<SignalEmitter>();
         float           best     = float.MaxValue;
         nearest = null;
 
