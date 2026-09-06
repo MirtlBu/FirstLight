@@ -20,7 +20,7 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     void Update()
     {
-        _rect.localScale = Vector3.Lerp(_rect.localScale, _targetScale, Time.deltaTime * speed);
+        _rect.localScale = Vector3.Lerp(_rect.localScale, _targetScale, Time.unscaledDeltaTime * speed);
     }
 
     public void OnPointerEnter(PointerEventData _) => _targetScale = _baseScale * hoverScale;
