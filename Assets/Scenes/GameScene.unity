@@ -4615,9 +4615,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
-<<<<<<< HEAD
---- !u!4 &1115948870 stripped
-=======
 --- !u!1 &1051533328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,27 +4774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHover
   hoverScale: 1.1
   speed: 8
---- !u!1 &1115948869
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1115948870}
-  - component: {fileID: 1115948873}
-  - component: {fileID: 1115948872}
-  - component: {fileID: 1115948871}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1115948870
->>>>>>> 6b6bb09bbec166019b9583fd65fbb2ff07d39322
+--- !u!4 &1115948870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197718174411075197, guid: f0e6f7e2495644e96b577128ef7ceb23, type: 3}
   m_PrefabInstance: {fileID: 635911216740435605}
@@ -6322,9 +6299,6 @@ Transform:
   - {fileID: 1203128796}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!114 &1838294543
-=======
 --- !u!1 &1862370976
 GameObject:
   m_ObjectHideFlags: 0
@@ -6363,24 +6337,11 @@ RectTransform:
   m_SizeDelta: {x: 1000, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862370978
->>>>>>> 6b6bb09bbec166019b9583fd65fbb2ff07d39322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1838294541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72221284a7fd74bb693cbba3b30a6e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LighthouseBeam
-  beamLight: {fileID: 688316391}
-  rotationPeriod: 15
-  detectionAnglePadding: 2
-  rotateAroundWorldUp: 1
-=======
   m_GameObject: {fileID: 1862370976}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6475,7 +6436,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862370976}
   m_CullTransparentMesh: 1
->>>>>>> 6b6bb09bbec166019b9583fd65fbb2ff07d39322
+--- !u!114 &1838294543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838294541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72221284a7fd74bb693cbba3b30a6e98, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::LighthouseBeam
+  beamLight: {fileID: 688316391}
+  rotationPeriod: 15
+  detectionAnglePadding: 2
+  rotateAroundWorldUp: 1
 --- !u!1 &1930029270
 GameObject:
   m_ObjectHideFlags: 0
