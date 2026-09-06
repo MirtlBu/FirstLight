@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuInteraction : MonoBehaviour
 {
@@ -78,7 +79,8 @@ public class MainMenuInteraction : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("[FirstLight] Start selected; gameplay scene loading is not wired yet.");
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("GameScene");
     }
 
     public void QuitGame()

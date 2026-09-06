@@ -1314,6 +1314,7 @@ GameObject:
   - component: {fileID: 880646202}
   - component: {fileID: 880646204}
   - component: {fileID: 880646203}
+  - component: {fileID: 880646205}
   m_Layer: 0
   m_Name: StartLabel
   m_TagString: Untagged
@@ -1364,8 +1365,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 273b3a8bc60f94e7bba5053b93e0ddb8, type: 2}
+  m_sharedMaterial: {fileID: 9080795809431359704, guid: 273b3a8bc60f94e7bba5053b93e0ddb8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1462,7 +1463,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 9080795809431359704, guid: 273b3a8bc60f94e7bba5053b93e0ddb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1486,6 +1487,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &880646205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880646201}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 25.168602, y: 5.906976, z: 0}
+  m_Center: {x: 0.09307193, y: -0.02925205, z: 0}
 --- !u!1 &903968699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,6 +2262,7 @@ GameObject:
   - component: {fileID: 1871802181}
   - component: {fileID: 1871802183}
   - component: {fileID: 1871802182}
+  - component: {fileID: 1871802184}
   m_Layer: 0
   m_Name: QuitLabel
   m_TagString: Untagged
@@ -2288,8 +2311,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 273b3a8bc60f94e7bba5053b93e0ddb8, type: 2}
+  m_sharedMaterial: {fileID: 9080795809431359704, guid: 273b3a8bc60f94e7bba5053b93e0ddb8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2386,7 +2409,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 9080795809431359704, guid: 273b3a8bc60f94e7bba5053b93e0ddb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2410,6 +2433,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1871802184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871802180}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 18.837208, y: 7.302325, z: 0}
+  m_Center: {x: 0.13959216, y: -0.72692794, z: 0.0000076293945}
 --- !u!1 &2076012802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,12 +2508,7 @@ MonoBehaviour:
   menuCamera: {fileID: 150989591}
   startPlanet: {fileID: 1339640847}
   quitPlanet: {fileID: 431168090}
-  decorativeObjects:
-  - {fileID: 1717094}
-  - {fileID: 835706303}
-  - {fileID: 585410306}
-  - {fileID: 903968700}
-  - {fileID: 1811916963}
+  creditsPanel: {fileID: 0}
   hoverScale: 1.03
   scaleSpeed: 8
 --- !u!1 &2123656839
