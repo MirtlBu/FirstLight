@@ -44,25 +44,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void OnGUI()
-    {
-        if (OxygenSystem.Instance == null) return;
-        float pct = OxygenSystem.Instance.NormalizedLeft * 100f;
-        string label = $"O2: {pct:F0}%";
-        GUIStyle style = new GUIStyle(GUI.skin.label);
-        style.fontSize = 24;
-        style.normal.textColor = pct > 50f ? Color.cyan : pct > 25f ? Color.yellow : Color.red;
-        GUI.Label(new Rect(20, 20, 200, 40), label, style);
-
-        if (PlayerSensor.Instance?.nearest != null)
-        {
-            float dist = PlayerSensor.Instance.nearest.normalizedDistance * PlayerSensor.Instance.nearest.maxRange;
-            float temp = PlayerSensor.Instance.colorTemperature;
-            GUI.Label(new Rect(20, 55, 400, 40), $"Nearest: {dist:F0}m  |  colorTemp: {temp:F2}", style);
-        }
-    }
-
-    IEnumerator WinSequence()
+IEnumerator WinSequence()
     {
         // Flash the star light to full brightness
         if (starLight != null)
