@@ -8,6 +8,9 @@ public class MainMenuInteraction : MonoBehaviour
     public Transform startPlanet;
     public Transform quitPlanet;
 
+    [Header("Credits")]
+    public GameObject creditsPanel;
+
     [Header("Hover")]
     public float hoverScale = 1.03f;
     public float scaleSpeed = 8f;
@@ -71,6 +74,7 @@ public class MainMenuInteraction : MonoBehaviour
 
     public void StartGame()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("GameScene");
     }
 
@@ -78,5 +82,17 @@ public class MainMenuInteraction : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("[FirstLight] Quit requested.");
+    }
+
+    public void OpenCredits()
+    {
+        if (creditsPanel != null)
+            creditsPanel.SetActive(true);
+    }
+
+    public void CloseCredits()
+    {
+        if (creditsPanel != null)
+            creditsPanel.SetActive(false);
     }
 }
