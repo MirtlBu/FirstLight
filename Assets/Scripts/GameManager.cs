@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public Light      starLight;
     public float      winFlashDuration = 2f;
 
+    float _startTime;
+    int   _currentLevel = 1;
+
     void Awake()
     {
         Instance = this;
@@ -24,7 +27,15 @@ public class GameManager : MonoBehaviour
         if (winScreen  != null) winScreen.SetActive(false);
         if (loseScreen != null) loseScreen.SetActive(false);
 
+        _startTime = Time.time;
         OxygenSystem.Instance.onDepleted.AddListener(OnOxygenDepleted);
+    }
+
+    void GoToGameOver()
+    {
+        float survived = Time.time - _startTime;
+        LeaderboardManager.Instance?.SetPending(survived, _currentLevel);
+        SceneManager.LoadScene("GameOver");
     }
 
     public void OnStarFound()
@@ -36,7 +47,7 @@ public class GameManager : MonoBehaviour
     public void OnOxygenDepleted()
     {
         Debug.Log("[FirstLight] *** OXYGEN DEPLETED — YOU LOSE ***");
-        if (loseScreen != null) loseScreen.SetActive(true);
+        GoToGameOver();
     }
 
     public void Restart()
