@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
         if (winScreen  != null) winScreen.SetActive(false);
         if (loseScreen != null) loseScreen.SetActive(false);
 
+        // Destroy any MainMenu objects that leaked in via DontDestroyOnLoad
+        var titleUI = GameObject.Find("TitleUI");
+        if (titleUI != null) Destroy(titleUI);
+
         _startTime = Time.time;
         OxygenSystem.Instance.onDepleted.AddListener(OnOxygenDepleted);
     }

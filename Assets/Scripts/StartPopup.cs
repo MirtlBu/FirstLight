@@ -103,10 +103,9 @@ public class StartPopup : MonoBehaviour
             yield return null;
         }
 
-        if (popupPanel != null)
-            popupPanel.SetActive(false);
-
         Time.timeScale = 1f;
+        if (popupPanel != null) Destroy(popupPanel);
+        Destroy(gameObject);
     }
 
     public void Dismiss()
