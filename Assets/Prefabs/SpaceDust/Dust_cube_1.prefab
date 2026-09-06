@@ -128,9 +128,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BeamReflectionTarget
   reflectionRenderers: []
   reflectionColor: {r: 1, g: 0.85, b: 0.55, a: 1}
-  reflectionIntensity: 4
-  fadeSpeed: 5
-  blockBeam: 1
+  reflectionIntensity: 3
+  fadeSpeed: 2
+  blockBeam: 0
+  glintRange: 0.15
   reflectionClip: {fileID: 0}
   reflectionVolume: 0.65
   soundCooldown: 0.5

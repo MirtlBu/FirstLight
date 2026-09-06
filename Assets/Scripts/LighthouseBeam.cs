@@ -17,7 +17,10 @@ public class LighthouseBeam : MonoBehaviour
             beamLight = GetComponentInChildren<Light>();
 
         if (beamLight != null)
+        {
             beamLight.enabled = true;
+            beamLight.shadows = LightShadows.Soft;
+        }
     }
 
     void Update()
@@ -32,12 +35,13 @@ public class LighthouseBeam : MonoBehaviour
             if (Targets[i] == null)
                 Targets.RemoveAt(i);
             else
-                Targets[i].SetBeamHit(IsInsideBeam(Targets[i]));
+                Targets[i].SetBeamHit(GetBeamHit(Targets[i], out RaycastHit hit), hit);
         }
     }
 
-    bool IsInsideBeam(BeamReflectionTarget target)
+    bool GetBeamHit(BeamReflectionTarget target, out RaycastHit hit)
     {
+        hit = default;
         Vector3 toTarget = target.transform.position - beamLight.transform.position;
         float distance = toTarget.magnitude;
         if (distance <= 0.001f || distance > beamLight.range)
@@ -48,7 +52,7 @@ public class LighthouseBeam : MonoBehaviour
         if (angle > halfAngle)
             return false;
 
-        if (target.blockBeam && Physics.Raycast(beamLight.transform.position, toTarget.normalized, out RaycastHit hit, distance))
+        if (Physics.Raycast(beamLight.transform.position, toTarget.normalized, out hit, distance))
             return hit.transform.IsChildOf(target.transform);
 
         return true;
