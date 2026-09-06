@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3524896961875658727}
   - component: {fileID: 6286738999601052325}
   m_Layer: 0
-  m_Name: Cube-test
+  m_Name: Dust_cube_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
